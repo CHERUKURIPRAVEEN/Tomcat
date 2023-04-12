@@ -68,7 +68,7 @@ Now start the Tomcat using bewlow commands.
 ```sh
    go to the `/opt/tomcat/bin`
    run below command
-   ./startup.sh file
+   ./startup.sh
 ```
 
 
