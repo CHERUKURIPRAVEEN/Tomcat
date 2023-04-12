@@ -52,7 +52,7 @@ In this step set the permissions.
 ```
 
 In this step set the users
-Open the user.xml file add below lines
+Open the tomcat-users.xml file add below lines
 
 ```sh
 vi /opt/tomact/conf/tomcat-users.xml
