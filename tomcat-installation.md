@@ -4,8 +4,8 @@
 ```sh
      Install java
      sudo apt update
-     sudo apt install openjdk-8-jdk-headless
-     sudo apt install openjdk-8-jre-headless
+     sudo apt install openjdk-11-jdk-headless
+     sudo apt install openjdk-11-jre-headless
      java -version
  ```
 	
@@ -41,19 +41,22 @@ Once Java installtion Completed
 Tomcat Port Selection
 ```sh
      cd tomcat/conf/
-     vi server.xm (in this file change the port if you want other wise its working on 8080 port)
+     vi server.xml (in this file change the port if you want other wise its working on 8080 port)
                   (in this file we have connector port section in that section you can change)
 ``` 
 
 In this step set the permissions.
 ```sh
-     find / -name context.xml
      vi /opt/tomcat/webapps/host-manager/META-INF/context.xml (comment the value section)
      vi /opt/tomcat/webapps/manager/META-INF/context.xml (comment the value section)
 ```
 
 In this step set the users
+Open the user.xml file add below lines
+
 ```sh
+vi /opt/tomact/conf/tomcat-users.xml
+
      <role rolename="manager-gui"/>
      <role rolename="manager-script"/>
      <role rolename="manager-jmx"/> 
@@ -64,7 +67,8 @@ Now start the Tomcat using bewlow commands.
 
 ```sh
    go to the `/opt/tomcat/bin`
-   run startup.sh file
+   run below command
+   ./startup.sh file
 ```
 
 
