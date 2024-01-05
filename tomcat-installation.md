@@ -55,7 +55,7 @@ In this step set the users
 Open the tomcat-users.xml file add below lines
 
 ```sh
-vi /opt/tomact/conf/tomcat-users.xml
+vi /opt/tomcat/conf/tomcat-users.xml
 
      <role rolename="manager-gui"/>
      <role rolename="manager-script"/>
